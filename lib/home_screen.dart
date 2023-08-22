@@ -99,7 +99,9 @@ class _HomeScreenState extends State<HomeScreen> {
           // update value
           FirebaseFirestore.instance
               .collection("basket_ball")
-              .doc("yDgsH9vlaJRQyP5y40Iu").update({"match_name":" Ind vs Pak"});
+              .doc("yDgsH9vlaJRQyP5y40Iu").update(
+              {"match_name":" Ind vs Pak","team_name_a":"India","team_name_b":"pakistan"}
+          );
 
           //delete document
           // FirebaseFirestore.instance.collection("basket_ball")
