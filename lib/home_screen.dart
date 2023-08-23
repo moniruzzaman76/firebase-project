@@ -26,7 +26,11 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: StreamBuilder(
         stream: FirebaseFirestore.instance.collection("basket_ball")
-            .doc("yDgsH9vlaJRQyP5y40Iu").snapshots(),
+            .doc("yDgsH9vlaJRQyP5y40Iu")
+        // .collection('abs')
+        // .doc('dfdf')
+        // .collection('abs')
+            .snapshots(),
         builder: (BuildContext context,
             AsyncSnapshot<DocumentSnapshot<Map<String, dynamic>>> snapshot) {
 
