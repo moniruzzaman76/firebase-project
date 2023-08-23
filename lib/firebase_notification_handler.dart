@@ -38,12 +38,6 @@ class FirebaseNotificationHandler {
     print(message.notification?.body ?? "Empty body");
     print(message.notification?.title ?? "Empty tittle");
   }
-  // top level function - not a method(not related to any class)
-  Future<void>firebaseMessagingBackGroundHandler(RemoteMessage message)async {
-    print(message.data?? "");
-    print(message.notification?.body ?? "Empty body");
-    print(message.notification?.title ?? "Empty tittle");
-  }
 
   Future<String?>getToken()async{
     final String? token = await firebaseMessaging.getToken();
@@ -64,5 +58,12 @@ class FirebaseNotificationHandler {
     await firebaseMessaging.unsubscribeFromTopic(topicName);
   }
 
+}
 
+
+/// top level function - not a method(not related to any class)
+Future<void>firebaseMessagingBackGroundHandler(RemoteMessage message)async {
+  print(message.data?? "");
+  print(message.notification?.body ?? "Empty body");
+  print(message.notification?.title ?? "Empty tittle");
 }
