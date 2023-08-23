@@ -34,7 +34,7 @@ class FirebaseNotificationHandler {
   }
 
   Future<void>messageHandler(RemoteMessage message)async {
-    print(message.data?? "");
+    print(message.data);
     print(message.notification?.body ?? "Empty body");
     print(message.notification?.title ?? "Empty tittle");
   }
@@ -63,7 +63,7 @@ class FirebaseNotificationHandler {
 
 /// top level function - not a method(not related to any class)
 Future<void>firebaseMessagingBackGroundHandler(RemoteMessage message)async {
-  print(message.data?? "");
+  print(message.data);
   print(message.notification?.body ?? "Empty body");
   print(message.notification?.title ?? "Empty tittle");
 }
